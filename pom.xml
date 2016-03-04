@@ -1,25 +1,68 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>edu.harvard.gmas</groupId>
-	<artifactId>gmas</artifactId>
-	<version>3.1-SNAPSHOT</version>
+	<artifactId>samg</artifactId>
+	<version>3.0</version>
 	<packaging>pom</packaging>
 	<name>GMAS applications</name>
+
+	<properties>
+		<gmas.scm>gmas.git.scm</gmas.scm>
+		<gmas.scm.tag>HEAD</gmas.scm.tag>
+	</properties>
+	
+	<scm>
+		<url>https://github.com/odadasheva/samg</url>
+		<connection>scm:git:git://github.com/odadasheva/samg</connection>
+		<developerConnection>scm:git:git@github.com:odadasheva/samg</developerConnection>
+		<tag>${gmas.scm.tag}</tag>
+	</scm>
+
 	<modules>
 		<module>gmas-entity-service</module>
 		<module>gmas-model</module>
 		<module>gmas-interfaces</module>
 		<module>gmas-grants-gov</module>
 		<module>gmas-webapp</module>
-		
 	</modules>
 
-	<scm>
-		<connection>scm:git:https://......</connection>
-		<tag>HEAD</tag>
-	</scm>
+	<repositories>
+		<repository>
+			<id>releases</id>
+			<url>http://gmastst-app1.cadm.harvard.edu:8911/nexus/content/repositories/releases</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>daily</updatePolicy>
+			</releases>
+		</repository>
+		<repository>
+			<id>snapshots</id>
+			<url>http://gmastst-app1.cadm.harvard.edu:8911/nexus/content/repositories/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>daily</updatePolicy>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+		<repository>
+			<id>thirdparty</id>
+			<url>http://gmastst-app1.cadm.harvard.edu:8911/nexus/content/repositories/thirdparty</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>daily</updatePolicy>
+			</releases>
+		</repository>
+	</repositories>
 
-		<build>
+	<build>
 		<plugins>
         <plugin>
             <groupId>external.atlassian.jgitflow</groupId>
