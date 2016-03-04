@@ -1,9 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>edu.harvard.gmas</groupId>
 	<artifactId>gmas</artifactId>
-	<version>3.0-SNAPSHOT</version>
+	<version>3.0</version>
 	<packaging>pom</packaging>
 	<name>GMAS applications</name>
 	<modules>
@@ -12,7 +11,7 @@
 		<module>gmas-interfaces</module>
 		<module>gmas-grants-gov</module>
 		<module>gmas-webapp</module>
-		<module>gmas-doc-repo</module>
+		
 	</modules>
 
 	<scm>
@@ -22,25 +21,15 @@
 
 		<build>
 		<plugins>
-			<plugin>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.4.2</version>
-				<configuration>
-					<autoVersionSubmodules>true</autoVersionSubmodules>
-					<!-- Keep changes in the local repo, push will be done afterwards -->
-					<pushChanges>false</pushChanges>
-					<localCheckout>true</localCheckout>
-					<!-- Use a better name for the tag -->
-					<tagNameFormat>v@{project.version}</tagNameFormat>
-				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>org.apache.maven.scm</groupId>
-						<artifactId>maven-scm-provider-gitexe</artifactId>
-						<version>1.9</version>
-					</dependency>
-				</dependencies>
-			</plugin>
+        <plugin>
+            <groupId>external.atlassian.jgitflow</groupId>
+            <artifactId>jgitflow-maven-plugin</artifactId>
+            <version>1.0-m5.1</version>
+            <configuration>
+                <!-- For specific plugin configuration options, 
+                see the Goals documentation page -->
+            </configuration>
+        </plugin>
 		</plugins>
 	</build>
 
