@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>edu.harvard.gmas</groupId>
-    <artifactId>gmas</artifactId>
+    <artifactId>samg</artifactId>
     <version>3.0</version>
   </parent>
   <artifactId>gmas-entity-service</artifactId>
