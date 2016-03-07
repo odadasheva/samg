@@ -63,6 +63,18 @@
 		</repository>
 	</repositories>
 
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<url>http://gmastst-app1.cadm.harvard.edu:8911/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Internal Snapshots</name>
+			<url>http://gmastst-app1.cadm.harvard.edu:8911/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<build>
 		<plugins>
 			<plugin>
