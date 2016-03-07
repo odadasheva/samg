@@ -3,7 +3,7 @@
   <parent>
     <groupId>edu.harvard.gmas</groupId>
     <artifactId>samg</artifactId>
-    <version>3.0</version>
+    <version>1.41.0-SNAPSHOT</version>
   </parent>
   <artifactId>gmas-model</artifactId>
 </project>

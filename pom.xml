@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>edu.harvard.gmas</groupId>
 	<artifactId>samg</artifactId>
-	<version>3.0</version>
+	<version>1.41.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>GMAS applications</name>
 
@@ -10,7 +10,7 @@
 		<gmas.scm>gmas.git.scm</gmas.scm>
 		<gmas.scm.tag>HEAD</gmas.scm.tag>
 	</properties>
-	
+
 	<scm>
 		<url>https://github.com/odadasheva/samg</url>
 		<connection>scm:git:git://github.com/odadasheva/samg</connection>
@@ -69,7 +69,7 @@
             <artifactId>jgitflow-maven-plugin</artifactId>
             <version>1.0-m5.1</version>
             <configuration>
-                <!-- For specific plugin configuration options, 
+                <!-- For specific plugin configuration options,
                 see the Goals documentation page -->
             </configuration>
         </plugin>
